@@ -31,9 +31,9 @@ pipeline {
         }
 
         stage('Push Docker Image') {
-            steps {
-                withDockerRegistry([credentialsId: 'dockerhub-creds']) {
-                    sh "docker push $IMAGE_NAME:latest"
+    steps {
+        withDockerRegistry([credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/']) {
+            sh 'docker push shrinikha05/react-app:latest'
                 }
             }
         }
