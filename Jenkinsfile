@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/Shrinikha05/demo-react-app.git'
+                git branch: 'main', url: 'https://github.com/Shrinikha05/demo-react-app.git'
             }
         }
 
